@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+
+<head>
+
+<!-- refer to CSS that was compiled by Laravel Mix -->
+
+<link rel="stylesheet" type="text/css" href="{% static 'build/app.css' %}">
+</head>
+
+<body>
+<div id="app">
+    {% block main_content %}
+
+    {% endblock %}
+</div>
+
+<!-- refer to JS that was compiled by Laravel Mix -->
+<script type="text/javascript" src="{% static 'build/app.js' %}"></script>
+</body>
+
+</html>
