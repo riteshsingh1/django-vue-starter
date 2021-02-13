@@ -15,9 +15,15 @@
                             {{ form|crispy }}
                             <button type="submit" class="btn btn-primary">Register</button>
                         </form>
+
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row mt-5">
+             <div class="col d-flex justify-content-center">
+                 Already Registered?  <a href="{% url 'login' %}">Login</a>
+             </div>
         </div>
     </div>
 
