@@ -5,7 +5,7 @@
 import {ref} from 'vue';
 export default {
   setup(){
-    const greeting = ref("I am A Vue Component in App")
+    const greeting = ref("Welcome To Dashboard.")
 
     return {
       greeting

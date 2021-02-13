@@ -1,0 +1,25 @@
+{% extends 'app/base_layout.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block main_content %}
+    <div class="container">
+        <h1 class="mt-5 text-center">Django Vue Starter</h1>
+        <div class="row mt-5">
+            <div class="col d-flex justify-content-center">
+                <div class="card w-50">
+                    <h5 class="card-header">Login</h5>
+                    <div class="card-body">
+                        {% include 'app/_partials/alert.html' %}
+                        <form method="POST">
+                            {% csrf_token %}
+                             {{ form|crispy }}
+                            <button type="submit" class="btn btn-primary mt-2">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

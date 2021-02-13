@@ -1,26 +1,36 @@
 <header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">{{ APP_NAME }}</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav me-auto mb-2 mb-md-0">
-        {#       Space for menu items in left            #}
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">{{ APP_NAME }}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav me-auto mb-2 mb-md-0">
+                    {#       Space for menu items in left            #}
+                </div>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{% url 'login' %}">{{ request.user.username }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{% url 'login' %}">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'register' %}">Register</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="d-flex">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
-          </li>
-        </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 </header>
