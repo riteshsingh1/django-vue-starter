@@ -7,7 +7,7 @@
 - [x] Setup Laravel Mix with Vue JS
 - [x] Install Django Rest Framework
 - [x] Registration and Login
+- [x] Reset and forgot password
 - [ ] Email Verification
 - [ ] Setup API For Registration & Login
-- [ ] Setup Emails for forget password
 - [ ] Documentation
