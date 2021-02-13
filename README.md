@@ -9,5 +9,6 @@
 - [x] Registration and Login
 - [x] Reset and forgot password
 - [ ] Email Verification
+- [ ] Profile Page And Change Password
 - [ ] Setup API For Registration & Login
 - [ ] Documentation
