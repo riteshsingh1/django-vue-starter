@@ -1,19 +1,43 @@
 {% load static %}
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ APP_NAME }}</title>
+    <meta name="theme-color" content="#7952b3">
 
-<!-- refer to CSS that was compiled by Laravel Mix -->
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
 
-<link rel="stylesheet" type="text/css" href="{% static 'build/app.css' %}">
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <!-- refer to CSS that was compiled by Laravel Mix -->
+    <link rel="stylesheet" type="text/css" href="{% static 'build/app.css' %}">
 </head>
+<body class="d-flex flex-column h-100">
+{% include 'app/_partials/navbar.html' %}
 
-<body>
-<div id="app">
+<!-- Begin page content -->
+<main class="flex-shrink-0" id="app">
+
     {% block main_content %}
 
     {% endblock %}
-</div>
+
+</main>
 
 <!-- refer to JS that was compiled by Laravel Mix -->
 <script type="text/javascript" src="{% static 'build/app.js' %}"></script>
