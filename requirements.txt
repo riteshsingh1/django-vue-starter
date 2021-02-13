@@ -2,3 +2,4 @@ Django~=3.1.6
 djangorestframework
 psycopg2-binary
 django-crispy-forms
+python-dotenv
